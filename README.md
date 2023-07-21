@@ -8,6 +8,11 @@ Before you begin, make sure you have the following installed on your system:
 
 1. Docker: [Install Docker](https://docs.docker.com/get-docker/)
 2. Docker Compose: [Install Docker Compose](https://docs.docker.com/compose/install/)
+3. You can follow the [Getting Started with Atlas](https://docs.atlas.mongodb.com/getting-started/) guide, to learn how to create a free Atlas account, create your first cluster and get your Connection String to the database.
+Then, set the Atlas URI connection parameter in `server/.env` to your Connection String:
+```
+ATLAS_URI=mongodb+srv://<username>:<password>@sandbox.jadwj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+```
 
 ## Getting Started
 
