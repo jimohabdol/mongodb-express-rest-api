@@ -1,29 +1,64 @@
-# MongoDB and Express.js REST API sample application
+# MongoDB Express REST API with Docker
 
-This repository contains the sample application for the [MongoDB and Express.js REST API tutorial](https://www.mongodb.com/languages/express-mongodb-rest-api-tutorial).
+This repository contains a MongoDB Express REST API application that can be easily started using Docker and Docker Compose.
 
-## How To Run
+## Prerequisites
 
-1. You can follow the [Getting Started with Atlas](https://docs.atlas.mongodb.com/getting-started/) guide, to learn how to create a free Atlas account, create your first cluster and get your Connection String to the database.
-Then, set the Atlas URI connection parameter in `server/.env` to your Connection String:
+Before you begin, make sure you have the following installed on your system:
+
+1. Docker: [Install Docker](https://docs.docker.com/get-docker/)
+2. Docker Compose: [Install Docker Compose](https://docs.docker.com/compose/install/)
+
+## Getting Started
+
+Follow the steps below to start the MongoDB Express REST API using Docker and Docker Compose:
+
+1. Clone the repository:
+
+   ```
+   git clone https://github.com/jimohabdol/mongodb-express-rest-api.git
+   cd mongodb-express-rest-api
+   ```
+
+2. Build and start the application using Docker Compose:
+
+   ```
+   docker-compose up -d
+   ```
+
+3. The MongoDB Express REST API should now be running and accessible at `http://localhost:3000`. You can test the API by sending requests to this URL.
+
+## Stopping the Application
+
+To stop the application and remove the containers, run the following command:
+
 ```
-ATLAS_URI=mongodb+srv://<username>:<password>@sandbox.jadwj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+docker-compose down
 ```
 
-2. Start the Express server:
-```
-cd server
-npm install
-npm run dev
-```
+## Configuration
 
-3. Start the React app (in a new terminal window):
-```
-cd app
-npm install
-npm start
-```
+The application can be configured using environment variables. The default configuration can be found in the `.env` file. If you want to change any configuration options, you can modify the `.env` file before starting the application.
 
-## Disclaimer
+## Contributing
 
-Use at your own risk; not a supported MongoDB product
+If you would like to contribute to this project, please follow the standard GitHub workflow:
+
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Test your changes thoroughly
+5. Commit and push your changes to your forked repository
+6. Create a pull request
+
+## Issues
+
+If you encounter any issues or have suggestions for improvements, please [open an issue](https://github.com/jimohabdol/mongodb-express-rest-api/issues) on GitHub.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as per the terms of the license.
+
+---
+
+Thank you for using the MongoDB Express REST API with Docker. If you find it helpful, consider leaving a star ⭐️ on the GitHub repository. If you have any questions or need further assistance, don't hesitate to reach out. Happy coding! 🚀
