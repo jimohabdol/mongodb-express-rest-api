@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: ./app  # Path to the front-end application directory containing the Dockerfile
+    image: app
+    container_name: app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"  # Map port 3000 of the container to port 3000 on the host (or use any other desired port)
+
+  backend:
+    image: server
+    container_name: server
+    restart: unless-stopped
+    build:
+      context: ./server  # Path to the back-end application directory containing the Dockerfile
+    ports:
+      - "5050:5050"  # Map port 5050 of the container to port 5050 on the host (or use any other desired port)
