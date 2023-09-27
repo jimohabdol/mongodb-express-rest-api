@@ -18,3 +18,4 @@ services:
       context: ./server  # Path to the back-end application directory containing the Dockerfile
     ports:
       - "5050:5050"  # Map port 5050 of the container to port 5050 on the host (or use any other desired port)
+    env_file: ../.env
